@@ -1,0 +1,48 @@
+﻿@page "/"
+
+<MatAppBarContainer>
+    <MatAppBar Fixed="true">
+        <MatAppBarRow>
+            <MatAppBarSection>
+                <MatIconButton Icon="menu">
+
+                </MatIconButton>
+                <MatAppBarTitle>MatBlazor - Material Design components for Blazor</MatAppBarTitle>
+            </MatAppBarSection>
+            <MatAppBarSection Align="@MatAppBarSectionAlign.End">
+                <MatIconButton Icon="favorite"></MatIconButton>
+            </MatAppBarSection>
+        </MatAppBarRow>
+    </MatAppBar>
+
+    <MatAppBarContent>
+        <p>https://github.com/BlazorComponents/BlazorNewsClient/tree/master/BlazorNewsClient</p>
+        <p>https://www.youtube.com/watch?v=T8V_Qq3fzd8</p>
+
+        <div class="main">
+            <h3>Heading 3</h3>
+            <MatList SingleSelection="true" TwoLine="true">
+                <MatListItem>
+                    <MatListItemText>
+                        <MatListItemPrimaryText>First-line text</MatListItemPrimaryText>
+                        <MatListItemSecondaryText>Second-line text</MatListItemSecondaryText>
+                    </MatListItemText>
+                </MatListItem>
+
+                <MatListItem>
+                    <MatListItemText>
+                        <MatListItemPrimaryText>First-line text</MatListItemPrimaryText>
+                        <MatListItemSecondaryText>Second-line text</MatListItemSecondaryText>
+                    </MatListItemText>
+                </MatListItem>
+
+                <MatListItem>
+                    <MatListItemText>
+                        <MatListItemPrimaryText>First-line text</MatListItemPrimaryText>
+                        <MatListItemSecondaryText>Second-line text</MatListItemSecondaryText>
+                    </MatListItemText>
+                </MatListItem>
+            </MatList>
+        </div>
+    </MatAppBarContent>
+</MatAppBarContainer>
