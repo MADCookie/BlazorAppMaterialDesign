@@ -1,48 +1,27 @@
 ﻿@page "/"
 
-<MatAppBarContainer>
-    <MatAppBar Fixed="true">
-        <MatAppBarRow>
-            <MatAppBarSection>
-                <MatIconButton Icon="menu">
+<MatH1>Hello World</MatH1>
 
-                </MatIconButton>
-                <MatAppBarTitle>MatBlazor - Material Design components for Blazor</MatAppBarTitle>
-            </MatAppBarSection>
-            <MatAppBarSection Align="@MatAppBarSectionAlign.End">
-                <MatIconButton Icon="favorite"></MatIconButton>
-            </MatAppBarSection>
-        </MatAppBarRow>
-    </MatAppBar>
-
-    <MatAppBarContent>
-        <p>https://github.com/BlazorComponents/BlazorNewsClient/tree/master/BlazorNewsClient</p>
-        <p>https://www.youtube.com/watch?v=T8V_Qq3fzd8</p>
-
-        <div class="main">
-            <h3>Heading 3</h3>
-            <MatList SingleSelection="true" TwoLine="true">
-                <MatListItem>
-                    <MatListItemText>
-                        <MatListItemPrimaryText>First-line text</MatListItemPrimaryText>
-                        <MatListItemSecondaryText>Second-line text</MatListItemSecondaryText>
-                    </MatListItemText>
-                </MatListItem>
-
-                <MatListItem>
-                    <MatListItemText>
-                        <MatListItemPrimaryText>First-line text</MatListItemPrimaryText>
-                        <MatListItemSecondaryText>Second-line text</MatListItemSecondaryText>
-                    </MatListItemText>
-                </MatListItem>
-
-                <MatListItem>
-                    <MatListItemText>
-                        <MatListItemPrimaryText>First-line text</MatListItemPrimaryText>
-                        <MatListItemSecondaryText>Second-line text</MatListItemSecondaryText>
-                    </MatListItemText>
-                </MatListItem>
-            </MatList>
-        </div>
-    </MatAppBarContent>
-</MatAppBarContainer>
+<div class="main">
+    <math3>More Info about MatBlazor</math3>
+    <MatList SingleSelection="true" TwoLine="true">
+        <MatListItem Href="https://www.matblazor.com" target="_blank">
+            <MatListItemText>
+                <MatListItemPrimaryText>Main MatBlazor docs</MatListItemPrimaryText>
+                <MatListItemSecondaryText>https://www.matblazor.com</MatListItemSecondaryText>
+            </MatListItemText>
+        </MatListItem>
+        <MatListItem Href="https://github.com/BlazorComponents/BlazorNewsClient/tree/master/BlazorNewsClient" target="_blank">
+            <MatListItemText>
+                <MatListItemPrimaryText>GitHub src for demo Blazor News Client</MatListItemPrimaryText>
+                <MatListItemSecondaryText>https://github.com/BlazorComponents/BlazorNewsClient/tree/master/BlazorNewsClient</MatListItemSecondaryText>
+            </MatListItemText>
+        </MatListItem>
+        <MatListItem Href="https://www.youtube.com/watch?v=T8V_Qq3fzd8" target="_blank">
+            <MatListItemText>
+                <MatListItemPrimaryText>Converting Blazor Template to Blazor News Client</MatListItemPrimaryText>
+                <MatListItemSecondaryText>https://www.youtube.com/watch?v=T8V_Qq3fzd8</MatListItemSecondaryText>
+            </MatListItemText>
+        </MatListItem>
+    </MatList>
+</div>

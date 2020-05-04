@@ -1,5 +1,48 @@
 ﻿@inherits LayoutComponentBase
 
-@Body
+<MatAppBarContainer>
+    <MatAppBar Fixed="true">
+        <MatAppBarRow>
+            <MatAppBarSection>
+                <MatIconButton OnClick="@((e) => ButtonClicked())" Icon="menu" />
+                <MatAppBarTitle>Blazor Template in Material Design</MatAppBarTitle>
+            </MatAppBarSection>
+            <MatAppBarSection Align="@MatAppBarSectionAlign.End">
+                <MatIconButton Icon="home"></MatIconButton>
+            </MatAppBarSection>
+        </MatAppBarRow>
+    </MatAppBar>
 
+    <MatAppBarContent>
+        <MatDrawerContainer Style="width: 100vw; height: 100vh;">
+            <MatDrawer @bind-Opened="@Opened">
+                <MatNavMenu>
+                    <MatNavItem Href="/">Home</MatNavItem>
+                    <MatNavItem Href="/Counter">Counter</MatNavItem>
+                    <MatNavSubMenu>
+                        <MatNavSubMenuHeader>
+                            <MatNavItem Href="/CoolFeature"><MatIcon Icon="all_inbox"></MatIcon>Coolest Features</MatNavItem>
+                        </MatNavSubMenuHeader>
+                        <MatNavSubMenuList>
+                            <MatNavItem Href="/CoolFeature">Cool</MatNavItem>
+                            <MatNavItem Href="/CoolChildFeature">Child</MatNavItem>
+                        </MatNavSubMenuList>
+                    </MatNavSubMenu>
+                </MatNavMenu>
+            </MatDrawer>
+            <MatDrawerContent>
+                <MatBody1>@Body</MatBody1>                
+            </MatDrawerContent>
+        </MatDrawerContainer>
+    </MatAppBarContent>
+</MatAppBarContainer>
 
+@code
+{
+    bool Opened = true;
+
+    void ButtonClicked()
+    {
+        Opened = !Opened;
+    }
+}
