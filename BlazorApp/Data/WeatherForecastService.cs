@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BlazorApp.Data
@@ -14,7 +15,7 @@ namespace BlazorApp.Data
         public Task<WeatherForecast[]> GetForecastAsync(DateTime startDate)
         {
             var rng = new Random();
-            return Task.FromResult(Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Task.FromResult(Enumerable.Range(1, 15).Select(index => new WeatherForecast
             {
                 Date = startDate.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
